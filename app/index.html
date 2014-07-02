@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Monster Mash Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+  
+    <div class="container">
+      <!-- Initial (1st) View -->
+      <div class="choosePlayerView">
+        <h1>Choose Your Hero</h1>
+
+        <div class="playerList">
+          
+          <div class="imageContainer">
+            <img src="" class="playerOne hero">
+          </div>
+
+          <div class="imageContainer">
+           <img src="" class="playerTwo hero">
+          </div>
+
+          <div class="imageContainer">
+            <img src="" class="playerThree hero">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2nd View -->
+      <div class="chooseMonsterView hidden">
+        <h1>Choose Your Enemy</h1>
+
+        <div class="monsterList">
+          
+          <div class="imageContainer">
+            <img src="" class="monsterOne enemy">
+          </div>
+
+          <div class="imageContainer">
+           <img src="" class="monsterTwo enemy">
+          </div>
+
+          <div class="imageContainer">
+            <img src="" class="monsterThree enemy">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 3rd View -->
+      <div class="battleView hidden">
+        <h1>Fight</h1>
+      </div>
+
+      <!-- 4th View -->
+      <div class="winnerView hidden">
+        <h1>You Win</h1>
+      </div>
+
+    </div>
+
+      <!-- build:js scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- build:js scripts/main.js -->
+      <script src="scripts/main.js"></script>
+      <!-- endbuild -->
+  </body>
+</html>
