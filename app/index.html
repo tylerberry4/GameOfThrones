@@ -5,6 +5,8 @@
     <title>Monster Mash Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -25,42 +27,42 @@
   
     <div class="container">
       <!-- Initial (1st) View -->
-      <div class="choosePlayerView">
+      <div class="chooseHeroView">
         <h1>Choose Your Hero</h1>
 
-        <div class="playerList">
+        <div class="characterList">
           
           <div class="imageContainer">
-            <img src="" class="playerOne hero">
+            <img src="" id="heroOne" class="hero">
           </div>
 
           <div class="imageContainer">
-           <img src="" class="playerTwo hero">
+           <img src="" id="heroTwo" class="hero">
           </div>
 
           <div class="imageContainer">
-            <img src="" class="playerThree hero">
+            <img src="" id="heroThree" class="hero">
           </div>
 
         </div>
       </div>
 
       <!-- 2nd View -->
-      <div class="chooseMonsterView hidden">
+      <div class="chooseEnemyView hidden">
         <h1>Choose Your Enemy</h1>
 
-        <div class="monsterList">
+        <div class="characterList">
           
           <div class="imageContainer">
-            <img src="" class="monsterOne enemy">
+            <img src="" id="enemyOne" class="enemy">
           </div>
 
           <div class="imageContainer">
-           <img src="" class="monsterTwo enemy">
+           <img src="" id="enemyTwo" class="enemy">
           </div>
 
           <div class="imageContainer">
-            <img src="" class="monsterThree enemy">
+            <img src="" id="enemyThree" class="enemy">
           </div>
 
         </div>
@@ -70,6 +72,19 @@
       <!-- 3rd View -->
       <div class="battleView hidden">
         <h1>Fight</h1>
+
+        <div class="characterList">
+          
+          <div class="imageContainer">
+            <img src="" class="chosenHero">
+          </div>
+
+          <div class="imageContainer">
+            <img src="" class="chosenEnemy">
+          </div>
+
+         </div> 
+
       </div>
 
       <!-- 4th View -->

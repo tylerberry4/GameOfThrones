@@ -49,12 +49,37 @@ var monterOne = new Monster({
 // interactions for players and monsters. (e.g. player selection, attack interactions)
 // e.g. $('.purple-people-eater').click(function () { Some code that attacks the monster! };
 
+// Initially hides views 2, 3, 4
 $(".hidden").hide()
 
+// 1st view click action choosing hero and showing 2nd view
+// $(".heroOne").click(function() {
+// 	$(this).appendTo(".chosenHero")
+//   $(".chooseHeroView").fadeOut( "slow", function() {});
+//   $(".chooseEnemyView").fadeIn( "slow", function() {});
+// });
+var hero;
+var enemy;
 $(".hero").click(function() {
-  $(".choosePlayerView").fadeOut( "slow", function() {});
-  $(".chooseMonsterView").fadeIn( "slow", function() {});
+	hero = this.id;
+  $(".chooseHeroView").fadeOut( "slow", function() {});
+  $(".chooseEnemyView").fadeIn( "slow", function() {});
 });
+
+$(".enemy").click(function() {
+	enemy = this.id;
+  $(".chooseEnemyView").fadeOut( "slow", function() {});
+  $(".chosenHero").attr("id", hero);
+  $(".chosenEnemy").attr("id", enemy);
+  $(".battleView").fadeIn( "slow", function() {});
+});
+
+$(".chosenEnemy").click(function() {
+	$(this).toggleClass('animated shake');
+});
+
+
+
 
 
 

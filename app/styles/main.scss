@@ -20,7 +20,7 @@ h1 {
 	font-weight: lighter;
 }
 
-.playerList {
+.characterList {
 	height: 500px;
 	width: 100%;	
 }
@@ -41,16 +41,26 @@ h1 {
 	}
 }
 
-.playerOne {
-  background:url('http://img3.wikia.nocookie.net/__cb20120316184837/gameofthrones/images/c/c3/TyrionEW.png')no-repeat center center;
+#heroOne {
+  background:url('http://img3.wikia.nocookie.net/__cb20120316184837/gameofthrones/images/c/c3/TyrionEW.png')no-repeat 50% 5%;
 }
 
-.playerTwo {
-  background:url('http://www.odt.co.nz/files/story/2011/11/sean_bean_stars_as_lord_eddard_ned_stark_in_i_game_4eae500ad9.JPG')no-repeat center center;
+#heroTwo {
+  background:url('http://www.odt.co.nz/files/story/2011/11/sean_bean_stars_as_lord_eddard_ned_stark_in_i_game_4eae500ad9.JPG')no-repeat 40% 8%;
 }
 
-.playerThree {
-  background:url('http://static.comicvine.com/uploads/original/12/123851/2498566-arya_stark.jpg')no-repeat center center;
+#heroThree {
+  background:url('http://static.comicvine.com/uploads/original/12/123851/2498566-arya_stark.jpg')no-repeat 80% 30%;
+}
+
+#enemyOne {
+	background:url('http://www.theplotbunnies.com/wp-content/uploads/2014/04/joffrey.png')no-repeat 35% 35%;
+}
+#enemyTwo {
+	background:url('http://img4.wikia.nocookie.net/__cb20120605015933/gameofthrones/images/c/c7/White_Walker_2x10.jpg')no-repeat 65% 20%;
+}
+#enemyThree {
+	background:url('http://static.tumblr.com/b9a0af49edcf144ffc2b364e971e3997/enqmi0r/Hpnmoi9ix/tumblr_static_tywin-lannister-1024.jpg')no-repeat 70% 30%;
 }
 
 
