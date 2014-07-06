@@ -63,11 +63,45 @@ h1 {
 	background:url('http://static.tumblr.com/b9a0af49edcf144ffc2b364e971e3997/enqmi0r/Hpnmoi9ix/tumblr_static_tywin-lannister-1024.jpg')no-repeat 70% 30%;
 }
 
+.battleView .imageContainer:nth-child(3) {
+	float: right;
+}
 
+img.arrow {
+	border-style: none;
+	position: relative;
+	bottom: 100%;
+	z-index: -1;
+}
 
+.attackBtn {
+	float: center;
+	display: inline;
+	width: 300px;
+	text-decoration: none;
+	border: black solid 4px;
+	padding: 30px;
+	font-family: GameOfThrones;
+	color: white;
+	background-color: rgba(192, 57, 43,1);
+	border-radius: 10px;
+	position: relative;
+	top: 180px;
+	left: 30%;
+	&:hover {
+		transition: background-color 0.5s ease;
+		background-color: black;
+		opacity: .7;
+		border-color: rgba(192, 57, 43,1);
+	}
+}
 
-
-
+.total {
+	text-align: center;
+	color: white;
+	position: relative;
+	bottom: 50px;
+}
 
 
 

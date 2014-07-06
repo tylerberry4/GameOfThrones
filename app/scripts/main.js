@@ -44,6 +44,7 @@ var monterOne = new Monster({
 });
 
 
+
 // ACTIONS
 // This is where jQuery will come into play and where you'll set a lot of your
 // interactions for players and monsters. (e.g. player selection, attack interactions)
@@ -71,12 +72,50 @@ $(".enemy").click(function() {
   $(".chooseEnemyView").fadeOut( "slow", function() {});
   $(".chosenHero").attr("id", hero);
   $(".chosenEnemy").attr("id", enemy);
-  $(".battleView").fadeIn( "slow", function() {});
+  $(".battleView").fadeIn( "slow", function() {
+  	$("h1").addClass('animated flip');
+  });
 });
 
-$(".chosenEnemy").click(function() {
-	$(this).toggleClass('animated shake');
+// $(function(){
+// $(".attackBtn").on("click", function(){
+//     $(".arrowOne").animate({ 
+//         left: "+=925px",
+//     }, 900 );
+//     setTimeout(function () {
+//     $(".chosenEnemy").addClass('animated shake');
+// 		}, 900
+// 		setTimeout(function () {
+//     $('.arrowOne').addClass('arrowTwo');
+// 		}, 1800
+		  
+// );
+// });
+// });
+
+var enemyHealth = 100;
+var heroHealth = 100;
+$('.attackBtn').click(function(){
+   enemyHealth = Number(enemyHealth) - Number(10);
+   $(".arrowOne").animate({ 
+         left: "+=925px",
+     }, 1000 );
+   $('.total').text("HEALTH: "+enemyHealth);
+
+   setTimeout(function () { 
+    $('.chosenEnemy').addClass('animated shake');
+    }, 1000);
+    $(".arrowOne").animate({ 
+         left: "+=-925px",
+     }, 0 );  
+
+    setTimeout(function () { 
+    $('.chosenEnemy').removeClass('animated shake');
+    }, 2000);
+           
 });
+
+$('.total').text("HEALTH: "+enemyHealth);   
 
 
 
