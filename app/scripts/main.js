@@ -53,12 +53,7 @@ var monterOne = new Monster({
 // Initially hides views 2, 3, 4
 $(".hidden").hide()
 
-// 1st view click action choosing hero and showing 2nd view
-// $(".heroOne").click(function() {
-// 	$(this).appendTo(".chosenHero")
-//   $(".chooseHeroView").fadeOut( "slow", function() {});
-//   $(".chooseEnemyView").fadeIn( "slow", function() {});
-// });
+// Stores chosen hero into variable and changes to next view
 var hero;
 var enemy;
 $(".hero").click(function() {
@@ -67,36 +62,22 @@ $(".hero").click(function() {
   $(".chooseEnemyView").fadeIn( "slow", function() {});
 });
 
+// Stores chosen enemy into variable and changes to next view
 $(".enemy").click(function() {
 	enemy = this.id;
   $(".chooseEnemyView").fadeOut( "slow", function() {});
   $(".chosenHero").attr("id", hero);
   $(".chosenEnemy").attr("id", enemy);
   $(".battleView").fadeIn( "slow", function() {
-  	$("h1").addClass('animated flip');
+  	$(".fight").addClass('animated flip');
   });
 });
 
-// $(function(){
-// $(".attackBtn").on("click", function(){
-//     $(".arrowOne").animate({ 
-//         left: "+=925px",
-//     }, 900 );
-//     setTimeout(function () {
-//     $(".chosenEnemy").addClass('animated shake');
-// 		}, 900
-// 		setTimeout(function () {
-//     $('.arrowOne').addClass('arrowTwo');
-// 		}, 1800
-		  
-// );
-// });
-// });
-
+// Animations for attack button and generates random number for enemy health
 var enemyHealth = 100;
-var heroHealth = 100;
+// var heroHealth = 100;
 $('.attackBtn').click(function(){
-   enemyHealth = Number(enemyHealth) - Number(10);
+   enemyHealth = Number(enemyHealth) - Number(Math.floor(Math.random()*21));
    $(".arrowOne").animate({ 
          left: "+=925px",
      }, 1000 );
@@ -112,10 +93,17 @@ $('.attackBtn').click(function(){
     setTimeout(function () { 
     $('.chosenEnemy').removeClass('animated shake');
     }, 2000);
-           
+
+    if (enemyHealth < 1) {
+  		$(".battleView").hide( "slow", function() {});
+  		$(".winnerView").fadeIn( "slow", function() {
+  			$(".youWin").addClass('animated bounceIn');
+  		});
+} 
 });
 
-$('.total').text("HEALTH: "+enemyHealth);   
+//displays enemy health
+$('.total').text("HEALTH: "+enemyHealth);  
 
 
 
