@@ -83,7 +83,7 @@ img.arrow {
 	z-index: -1;
 }
 
-.attackBtn {
+.button {
 	float: center;
 	display: inline;
 	width: 300px;
@@ -120,6 +120,11 @@ img.arrow {
 	top: 100px;
 }
 
+.playAgainBtn {
+	top: 5px;
+	left: 150%;
+	font-family: Cinzel, GameOfThrones, serif;
+}
 
 
 

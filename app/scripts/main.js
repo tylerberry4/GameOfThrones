@@ -103,8 +103,12 @@ $('.attackBtn').click(function(){
 });
 
 //displays enemy health
-$('.total').text("HEALTH: "+enemyHealth);  
+$('.total').text("HEALTH: "+enemyHealth); 
 
+// Clicking play again button resets game 
+$(".playAgainBtn").click(function() {
+  window.location.reload();
+});
 
 
 
