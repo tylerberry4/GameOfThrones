@@ -5,6 +5,7 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
     "underscore": "~1.6.0",
+    "animate.css": "latest",
     "fontawesome": "~4.1.0"
   },
   "devDependencies": {
