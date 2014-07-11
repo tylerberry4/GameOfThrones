@@ -75,13 +75,14 @@ $(".enemy").click(function() {
 
 // Animations for attack button and generates random number for enemy health
 var enemyHealth = 100;
-// var heroHealth = 100;
+var heroHealth = 100;
 $('.attackBtn').click(function(){
    enemyHealth = Number(enemyHealth) - Number(Math.floor(Math.random()*21));
+   heroHealth = Number(heroHealth) - Number(Math.floor(Math.random()*21));
    $(".arrowOne").animate({ 
          left: "+=925px",
      }, 1000 );
-   $('.total').text("HEALTH: "+enemyHealth);
+   $('.enemyTotal').text("HEALTH: "+enemyHealth);
 
    setTimeout(function () { 
     $('.chosenEnemy').addClass('animated shake');
@@ -94,16 +95,52 @@ $('.attackBtn').click(function(){
     $('.chosenEnemy').removeClass('animated shake');
     }, 2000);
 
-    if (enemyHealth < 1) {
-  		$(".battleView").hide( "slow", function() {});
-  		$(".winnerView").fadeIn( "slow", function() {
-  			$(".youWin").addClass('animated bounceIn');
-  		});
-} 
+// enemy fights back 
+
+    setTimeout(function () {
+    $(".arrowTwo").delay(2000).animate({ 
+         right: "+=925px",
+     }, 1000 );
+    $(".arrowTwo").animate({ 
+         right: "+=-925px",
+     }, 0 );  
+
+    setTimeout(function () { 
+    $('.chosenHero').addClass('animated shake');
+    }, 3000);  
+    
+    setTimeout(function () { 
+    $('.chosenHero').removeClass('animated shake');
+    }, 4000); 
+
+    $('.heroTotal').text("HEALTH: "+heroHealth);
+    });
+
+    if (heroHealth < 1) 
+    {
+      $(".battleView").hide( "slow", function() {});
+      $(".loserView").fadeIn( "slow", function() {});
+    } 
+
+    if (enemyHealth < 1) 
+    {
+      $(".battleView").hide( "slow", function() {});
+      $(".winnerView").fadeIn("slow", function() {});
+    } 
+
+
+
+    // if (enemyHealth < 1) {
+  		// $(".battleView").hide( "slow", function() {});
+  		// $(".winnerView").fadeIn( "slow", function() {
+  		//   $(".youWin").addClass('animated bounceIn');
+  		// });
+    // };
 });
 
 //displays enemy health
-$('.total').text("HEALTH: "+enemyHealth); 
+$('.enemyTotal').text("HEALTH: " + enemyHealth); 
+$('.heroTotal').text("HEALTH: " + heroHealth); 
 
 // Clicking play again button resets game 
 $(".playAgainBtn").click(function() {
