@@ -77,8 +77,8 @@ $(".enemy").click(function() {
 var enemyHealth = 100;
 var heroHealth = 100;
 $('.attackBtn').click(function(){
-   enemyHealth = Number(enemyHealth) - Number(Math.floor(Math.random()*21));
-   heroHealth = Number(heroHealth) - Number(Math.floor(Math.random()*21));
+   enemyHealth = Number(enemyHealth) - Number(Math.floor(Math.random()*30));
+   heroHealth = Number(heroHealth) - Number(Math.floor(Math.random()*15));
    $(".arrowOne").animate({ 
          left: "+=925px",
      }, 1000 );
