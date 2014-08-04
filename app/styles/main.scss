@@ -8,7 +8,7 @@
 
 body {
 	margin: 0;
-	background: url('http://i.imgur.com/AWClkib.jpg?1') no-repeat center center fixed;
+	background: url('http://moviesofhollywood.com/wp-content/uploads/2013/10/disney-Frozen-Movie-Waterfall-HD-Wallpapers-backgrounds1.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -21,8 +21,10 @@ h1 {
 	font-size: 5em;
 	text-align: center;
 	font-family: GameOfThrones, Cinzel, serif;
-	color: white;
+	color: purple;
 	font-weight: lighter;
+	text-shadow: -3px 0 10px black, 0 1px 10px black, 1px 0 10px black, 0 -1px 10px black;
+	margin-bottom: 0;
 }
 
 .characterList {
@@ -51,26 +53,26 @@ h1 {
 }
 
 #heroOne {
-  background:url('http://img3.wikia.nocookie.net/__cb20120316184837/gameofthrones/images/c/c3/TyrionEW.png')no-repeat 50% 5%;
-  
+  // background:url('http://img3.wikia.nocookie.net/__cb20120316184837/gameofthrones/images/c/c3/TyrionEW.png')no-repeat 50% 5%;
+  background:url('http://media-cache-ec0.pinimg.com/736x/ee/b6/a7/eeb6a779893a7319fa96e414137d7a56.jpg')no-repeat 50% 20%;
 }
 
 #heroTwo {
-  background:url('http://www.odt.co.nz/files/story/2011/11/sean_bean_stars_as_lord_eddard_ned_stark_in_i_game_4eae500ad9.JPG')no-repeat 40% 8%;
+  background:url('http://static.comicvine.com/uploads/original/11114/111144096/3675022-0075922573-disne.jpg')no-repeat 60% 8%;
 }
 
 #heroThree {
-  background:url('http://static.comicvine.com/uploads/original/12/123851/2498566-arya_stark.jpg')no-repeat 80% 30%;
+  background:url('http://www.gbeye.com/images/site_images/gbeyebtob/lightbox/originals/0004/3290/FP3296-FROZEN-anna.jpg/1391678057/FP3296-FROZEN-anna.jpg')no-repeat 80% 10%;
 }
 
 #enemyOne {
-	background:url('http://www.theplotbunnies.com/wp-content/uploads/2014/04/joffrey.png')no-repeat 35% 35%;
+	background:url('http://media-cache-ec0.pinimg.com/736x/80/0e/0c/800e0c15a942de8352a6f7df640263d4.jpg')no-repeat 75% 35%;
 }
 #enemyTwo {
-	background:url('http://img4.wikia.nocookie.net/__cb20120605015933/gameofthrones/images/c/c7/White_Walker_2x10.jpg')no-repeat 65% 20%;
+	background:url('http://pmchollywoodlife.files.wordpress.com/2014/03/maleficent-angelina-jolie-wings-video-ftr.jpg?w=600&h=400&crop=1')no-repeat 65% 20%;
 }
 #enemyThree {
-	background:url('http://static.tumblr.com/b9a0af49edcf144ffc2b364e971e3997/enqmi0r/Hpnmoi9ix/tumblr_static_tywin-lannister-1024.jpg')no-repeat 70% 30%;
+	background:url('http://img2.wikia.nocookie.net/__cb20131227031944/the-mystery-case-files/images/1/12/Ursula.jpg')no-repeat 70% 10%;
 }
 
 .battleView .imageContainer:nth-child(3) {
@@ -108,11 +110,13 @@ img.arrow {
 
 .total {
 	text-align: center;
-	color: white;
+	color: purple;
 	position: relative;
 	bottom: 50px;
 	font-size: 1.8em;
 	font-family: Cinzel;
+	font-weight: bold;
+	text-shadow: -3px 0 10px black, 0 1px 10px black, 1px 0 10px black, 0 -1px 10px black;
 }
 
 .heroTotal {
